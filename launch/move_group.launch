@@ -1,5 +1,6 @@
 <launch>
 
+  <arg name="simulation"  default="true"/>
   <!-- GDB Debug Option -->
   <arg name="debug" default="false" />
   <arg unless="$(arg debug)" name="launch_prefix" value="" />
@@ -53,6 +54,7 @@
     <arg name="moveit_manage_controllers" value="true" />
     <arg name="moveit_controller_manager" value="ar_ur5" unless="$(arg fake_execution)"/>
     <arg name="moveit_controller_manager" value="fake" if="$(arg fake_execution)"/>
+    <arg name="simulation"                value="$(arg simulation)"/>
   </include>
 
   <!-- Sensors Functionality -->
