@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ar_moveit_config)
+project(robin_ur5_3fgripper_moveit_config)
 
 find_package(catkin REQUIRED)
 
